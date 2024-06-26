@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(attack_on_titan___by_goruditai_d6cmmk4.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.wrapper{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index: 99;
+}
+.navigation a{
+    position: relative;
+    padding: 15px;
+    color:white;
+    cursor: pointer;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin-left: 40px;
+}
+.navigation a::after{
+    content:'';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .4s;
+}
+.navigation a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.navigation .opsilogin{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navigation .opsilogin:hover{
+    background-color: black;
+    border: 2px solid black;
+    color: #fff;
+}
+
+.logo{
+    font-size: 2em;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #fff;      
+}
+@keyframes colorChange {
+    0% {
+        color: red;
+    }
+    25% {
+        color: rgb(253, 34, 224);
+    }
+    50% {
+        color: rgb(41, 28, 231);
+    }
+    75% {
+        color: rgb(139, 15, 240);
+    }
+    100% {
+        color: red;
+    }
+}
+
+.sambutan{
+    animation: colorChange 5s infinite;
+    font-size: 3em;
+}
